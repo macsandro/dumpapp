@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number: MyString
+  location: MyString
+  dumpster_type: one
+
+two:
+  number: MyString
+  location: MyString
+  dumpster_type: two

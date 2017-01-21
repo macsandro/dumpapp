@@ -1,0 +1,31 @@
+<%= form_for(dumpster) do |f| %>
+  <% if dumpster.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(dumpster.errors.count, "error") %> prohibited this dumpster from being saved:</h2>
+
+      <ul>
+      <% dumpster.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :number %>
+    <%= f.collection_select :dumpster_type_id, DumpsterType.all, :id, :name%>
+  </div>
+    <div class="field">
+    <%= f.label :site %>
+    <%= f.collection_select :site_id, Site.all, :id, :name%>
+  </div>
+
+  <div class="field">
+    <%= f.label :number %>
+    <%= f.text_field :number %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+json.extract! work_order, :id, :number, :date, :description, :work_order_status_id, :site_id, :driver_id, :start_date, :finish_date, :created_at, :updated_at
+json.url work_order_url(work_order, format: :json)

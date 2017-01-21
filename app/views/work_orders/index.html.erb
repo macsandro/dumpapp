@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Work Orders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>Date</th>
+      <th>Description</th>
+      <th>Status</th>
+      <th>Site</th>
+      <th>Driver</th>
+      <th>Start</th>
+      <th>Finish</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @work_orders.each do |work_order| %>
+      <tr>
+        <td><%= work_order.number %></td>
+        <td><%= work_order.date.to_formatted_s(:short) %></td>
+        <td><%= work_order.description %></td>
+        <td><%= work_order.work_order_status.name %></td>
+        <td><%= work_order.site.name %> | <%= work_order.site.address %></td>
+        <td><%= work_order.driver.name %></td>
+        <td><%= work_order.start_date.to_formatted_s(:short) %></td>
+        <td><%= work_order.finish_date.to_formatted_s(:short) %></td>
+        <td><%= link_to 'Show', work_order %></td>
+        <td><%= link_to 'Edit', edit_work_order_path(work_order) %></td>
+        <td><%= link_to 'Destroy', work_order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Work Order', new_work_order_path %>

@@ -1,0 +1,2 @@
+class Dumpsite < ApplicationRecord
+end

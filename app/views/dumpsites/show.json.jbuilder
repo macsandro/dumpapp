@@ -1,0 +1,1 @@
+json.partial! "dumpsites/dumpsite", dumpsite: @dumpsite

@@ -1,0 +1,1 @@
+json.partial! "dumpster_types/dumpster_type", dumpster_type: @dumpster_type

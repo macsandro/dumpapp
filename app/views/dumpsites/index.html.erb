@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dumpsites</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dumpsites.each do |dumpsite| %>
+      <tr>
+        <td><%= dumpsite.name %></td>
+        <td><%= dumpsite.address %></td>
+        <td><%= link_to 'Show', dumpsite %></td>
+        <td><%= link_to 'Edit', edit_dumpsite_path(dumpsite) %></td>
+        <td><%= link_to 'Destroy', dumpsite, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dumpsite', new_dumpsite_path %>

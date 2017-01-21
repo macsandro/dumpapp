@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @work_order.number %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @work_order.date.to_formatted_s(:short) %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @work_order.description %>
+</p>
+
+<p>
+  <strong>Work order status:</strong>
+  <%= @work_order.work_order_status.name %>
+</p>
+
+<p>
+  <strong>Site:</strong>
+  <%= @work_order.site.name %> | <%=@work_order.site.address %>
+</p>
+
+<p>
+  <strong>Driver:</strong>
+  <%= @work_order.driver.name %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @work_order.start_date.to_formatted_s(:short) %>
+</p>
+
+<p>
+  <strong>Finish date:</strong>
+  <%= @work_order.finish_date.to_formatted_s(:short) %>
+</p>
+
+<%= link_to 'Edit', edit_work_order_path(@work_order) %> |
+<%= link_to 'Back', work_orders_path %>

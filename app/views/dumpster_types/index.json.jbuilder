@@ -1,0 +1,1 @@
+json.array! @dumpster_types, partial: 'dumpster_types/dumpster_type', as: :dumpster_type

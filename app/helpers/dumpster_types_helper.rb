@@ -1,0 +1,2 @@
+module DumpsterTypesHelper
+end

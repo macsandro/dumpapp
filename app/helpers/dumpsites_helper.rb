@@ -1,0 +1,2 @@
+module DumpsitesHelper
+end

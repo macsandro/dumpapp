@@ -1,0 +1,59 @@
+<%= form_for(work_order) do |f| %>
+  <% if work_order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(work_order.errors.count, "error") %> prohibited this work_order from being saved:</h2>
+
+      <ul>
+      <% work_order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :number %>
+    <%= f.number_field :number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :date %>
+    <%= f.datetime_select :date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+
+
+    <div class="field">
+    <%= f.label :work_order_status_id %>
+    <%= f.collection_select :work_order_status_id, WorkOrderStatus.all, :id, :name%>
+  </div>
+
+  <div class="field">
+    <%= f.label :site_id %>
+    <%= f.collection_select :site_id, Site.all, :id, :name%>
+  </div>
+
+  <div class="field">
+    <%= f.label :driver_id %>
+    <%= f.collection_select :driver_id, Driver.all, :id, :name%>
+  </div>  
+
+  <div class="field">
+    <%= f.label :start_date %>
+    <%= f.datetime_select :start_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :finish_date %>
+    <%= f.datetime_select :finish_date %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

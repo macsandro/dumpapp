@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  service_type: one
+  date: 2017-01-21 11:46:06
+  description: MyString
+  quantity: 9.99
+  rate: 9.99
+
+two:
+  service_type: two
+  date: 2017-01-21 11:46:06
+  description: MyString
+  quantity: 9.99
+  rate: 9.99

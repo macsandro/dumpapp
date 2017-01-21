@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dumpsite.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @dumpsite.address %>
+</p>
+
+<%= link_to 'Edit', edit_dumpsite_path(@dumpsite) %> |
+<%= link_to 'Back', dumpsites_path %>

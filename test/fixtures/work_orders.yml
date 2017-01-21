@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number: 1
+  date: 2017-01-21 10:48:12
+  description: MyText
+  work_order_status: one
+  site: one
+  driver: one
+  start_date: 2017-01-21 10:48:12
+  finish_date: 2017-01-21 10:48:12
+
+two:
+  number: 1
+  date: 2017-01-21 10:48:12
+  description: MyText
+  work_order_status: two
+  site: two
+  driver: two
+  start_date: 2017-01-21 10:48:12
+  finish_date: 2017-01-21 10:48:12

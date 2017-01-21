@@ -1,0 +1,1 @@
+json.array! @dumpsites, partial: 'dumpsites/dumpsite', as: :dumpsite

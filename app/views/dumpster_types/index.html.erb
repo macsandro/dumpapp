@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dumpster Types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dumpster_types.each do |dumpster_type| %>
+      <tr>
+        <td><%= dumpster_type.name %></td>
+        <td><%= link_to 'Show', dumpster_type %></td>
+        <td><%= link_to 'Edit', edit_dumpster_type_path(dumpster_type) %></td>
+        <td><%= link_to 'Destroy', dumpster_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dumpster Type', new_dumpster_type_path %>
